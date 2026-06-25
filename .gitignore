@@ -1,8 +1,14 @@
 node_modules/
 dist/
 data/state/
+data/deals/
+data/briefings/
 data/corpus/
+data/post-call/
+data/research/
+data/transcripts/
 data/working/
+memory/
 .env
 *.db
 *.db-journal
