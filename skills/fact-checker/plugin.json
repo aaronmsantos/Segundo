@@ -1,0 +1,8 @@
+{
+  "name": "fact-checker",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "Verify claims in any customer-facing artifact against source data. Catches wrong names, date mismatches, unsourced statistics, unattributed quotes, and hallucinated entities before shipping.",
+  "requires": ["company_config"],
+  "triggers": ["manual"]
+}

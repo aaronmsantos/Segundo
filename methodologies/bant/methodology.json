@@ -1,0 +1,61 @@
+{
+  "id": "bant",
+  "name": "BANT",
+  "version": "1.0.0",
+  "description": "4-factor deal qualification framework. Best for high-velocity sales or early-stage qualification before applying a deeper methodology.",
+  "factors": [
+    {
+      "id": "budget",
+      "name": "Budget",
+      "description": "Is there allocated budget for this purchase?",
+      "weight": 1,
+      "levels": {
+        "green": "Budget confirmed and allocated for this fiscal period",
+        "yellow": "Budget exists in principle but not formally allocated or amount unclear",
+        "red": "No budget identified or prospect has not discussed budget"
+      }
+    },
+    {
+      "id": "authority",
+      "name": "Authority",
+      "description": "Are we talking to the decision maker?",
+      "weight": 1,
+      "levels": {
+        "green": "Primary contact is the decision maker or we have direct access to them",
+        "yellow": "Decision maker identified but we are working through an intermediary",
+        "red": "Decision maker unknown or inaccessible"
+      }
+    },    {
+      "id": "need",
+      "name": "Need",
+      "description": "Is there a confirmed business need?",
+      "weight": 1,
+      "levels": {
+        "green": "Prospect has articulated specific pain points and desired outcomes",
+        "yellow": "General interest expressed but specific needs not fully defined",
+        "red": "No confirmed need -- exploring or was inbound with unclear intent"
+      }
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline",
+      "description": "Is there a defined timeline for the decision?",
+      "weight": 1,
+      "levels": {
+        "green": "Specific decision date or go-live date confirmed by the prospect",
+        "yellow": "General timeframe mentioned but no firm date",
+        "red": "No timeline discussed or 'no rush' indicated"
+      }
+    }
+  ],
+  "scoring": {
+    "points": { "green": 10, "yellow": 5, "red": 0 },
+    "max_score": 40,
+    "thresholds": {
+      "commit": { "min": 35, "label": "Commit" },
+      "best_case": { "min": 25, "label": "Best Case" },
+      "pipeline": { "min": 15, "label": "Pipeline" },
+      "at_risk": { "min": 0, "label": "At Risk" }
+    }
+  }
+}

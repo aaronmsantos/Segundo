@@ -1,0 +1,8 @@
+{
+  "name": "champion-audit",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "6-test champion validation framework to verify if your champion is real or an imposter",
+  "requires": ["crm"],
+  "triggers": ["manual"]
+}

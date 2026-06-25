@@ -1,0 +1,8 @@
+{
+  "name": "deal-inspector",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "MEDDPICC deal health audit with risk assessment, control mapping, and next-best-action",
+  "requires": ["crm"],
+  "triggers": ["manual", "deal_updated"]
+}

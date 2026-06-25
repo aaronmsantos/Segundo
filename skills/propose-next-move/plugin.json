@@ -1,0 +1,1 @@
+{"name":"propose-next-move","version":"1.0.0","type":"skill","description":"Single best action recommendation for any deal","requires":["crm"],"triggers":["manual","deal_updated"]}

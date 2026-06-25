@@ -1,0 +1,1 @@
+{"name":"commercial-closer","version":"1.0.0","type":"skill","description":"Agreement principles, pricing strategy, and commercial close plan","requires":["crm"],"triggers":["manual"]}

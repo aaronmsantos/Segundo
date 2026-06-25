@@ -1,0 +1,103 @@
+{
+  "id": "meddpicc",
+  "name": "MEDDPICC",
+  "version": "1.0.0",
+  "description": "8-factor enterprise deal qualification framework",
+  "factors": [
+    {
+      "id": "metrics",
+      "name": "Metrics",
+      "description": "Is the business impact quantified?",
+      "weight": 1,
+      "levels": {
+        "green": "Prospect confirmed specific dollar figures, volumes, or risk numbers",
+        "yellow": "We estimated numbers but prospect hasn't validated",
+        "red": "No quantification exists"
+      }
+    },
+    {
+      "id": "economic_buyer",
+      "name": "Economic Buyer",
+      "description": "Is the person who signs the check identified and engaged?",
+      "weight": 1,
+      "levels": {
+        "green": "EB has met with our team directly",
+        "yellow": "EB identified but no direct engagement",
+        "red": "Unknown or inaccessible"
+      }
+    },    {
+      "id": "decision_criteria",
+      "name": "Decision Criteria",
+      "description": "Do we know what they're evaluating on?",
+      "weight": 1,
+      "levels": {
+        "green": "Criteria discussed and confirmed on a call",
+        "yellow": "Inferred from context but not confirmed",
+        "red": "Unknown"
+      }
+    },
+    {
+      "id": "decision_process",
+      "name": "Decision Process",
+      "description": "Do we know the steps from yes to signed contract?",
+      "weight": 1,
+      "levels": {
+        "green": "Mapped step-by-step with the champion",
+        "yellow": "General shape known",
+        "red": "Unknown"
+      }
+    },
+    {
+      "id": "paper_process",
+      "name": "Paper Process",
+      "description": "Do we know procurement, legal, security, and timeline?",
+      "weight": 1,
+      "levels": {
+        "green": "Mapped with specific steps and owners",
+        "yellow": "General awareness that procurement exists",
+        "red": "Not discussed"
+      }
+    },    {
+      "id": "pain",
+      "name": "Identified Pain",
+      "description": "Is the pain real, quantified, and personally felt by the champion?",
+      "weight": 1,
+      "levels": {
+        "green": "Champion articulated pain in their own words with consequences",
+        "yellow": "We identified pain, prospect acknowledged",
+        "red": "Assumed pain only"
+      }
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "description": "Do we have someone with motive, influence, access to EB, and actively selling for us?",
+      "weight": 1,
+      "levels": {
+        "green": "All four: motive + influence + EB access + active internal selling",
+        "yellow": "2-3 of the four criteria met",
+        "red": "0-1 criteria met"
+      }
+    },
+    {
+      "id": "competition",
+      "name": "Competition",
+      "description": "Do we know who else is being evaluated and our position?",
+      "weight": 1,
+      "levels": {
+        "green": "Competitors identified, our differentiation confirmed by prospect",
+        "yellow": "Competitors identified but position unclear",
+        "red": "Unknown competitive landscape"
+      }
+    }
+  ],
+  "scoring": {
+    "points": { "green": 10, "yellow": 5, "red": 0 },
+    "max_score": 80,    "thresholds": {
+      "commit": { "min": 70, "label": "Commit" },
+      "best_case": { "min": 50, "label": "Best Case" },
+      "pipeline": { "min": 30, "label": "Pipeline" },
+      "at_risk": { "min": 0, "label": "At Risk" }
+    }
+  }
+}

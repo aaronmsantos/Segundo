@@ -1,0 +1,64 @@
+{
+  "id": "custom",
+  "name": "REPLACE: Your Methodology Name",
+  "version": "1.0.0",
+  "description": "REPLACE: Describe what this methodology qualifies and when to use it. This is a template -- duplicate this directory, rename it, and customize every field.",
+  "factors": [
+    {
+      "id": "factor_one",
+      "name": "REPLACE: Factor Name",
+      "description": "REPLACE: The question this factor answers. Example: 'Is the business impact quantified?'",
+      "weight": 1,
+      "levels": {
+        "green": "REPLACE: What does confirmed look like? Be specific. Evidence-based, not assumed.",
+        "yellow": "REPLACE: What does partially known look like? Some signal but gaps remain.",
+        "red": "REPLACE: What does unknown or at-risk look like? No evidence or active risk."
+      }
+    },
+    {
+      "id": "factor_two",
+      "name": "REPLACE: Factor Name",
+      "description": "REPLACE: The question this factor answers.",
+      "weight": 1,
+      "levels": {
+        "green": "REPLACE: Confirmed state",
+        "yellow": "REPLACE: Partial state",
+        "red": "REPLACE: Unknown or at-risk state"
+      }
+    },    {
+      "id": "factor_three",
+      "name": "REPLACE: Factor Name",
+      "description": "REPLACE: The question this factor answers.",
+      "weight": 1,
+      "levels": {
+        "green": "REPLACE: Confirmed state",
+        "yellow": "REPLACE: Partial state",
+        "red": "REPLACE: Unknown or at-risk state"
+      }
+    }
+  ],
+  "scoring": {
+    "points": { "green": 10, "yellow": 5, "red": 0 },
+    "max_score": 30,
+    "thresholds": {
+      "commit": { "min": 26, "label": "Commit" },
+      "best_case": { "min": 18, "label": "Best Case" },
+      "pipeline": { "min": 10, "label": "Pipeline" },
+      "at_risk": { "min": 0, "label": "At Risk" }
+    }
+  },
+  "_instructions": {
+    "how_to_customize": [
+      "1. Duplicate this directory: cp -r methodologies/custom methodologies/your-name",
+      "2. Change the 'id' field to match your directory name",
+      "3. Update 'name' and 'description'",
+      "4. Add, remove, or modify factors. Each needs: id, name, description, weight, and 3 levels",
+      "5. Update max_score = number of factors * points.green",
+      "6. Set thresholds. Commit ~85-90% of max. Best Case ~60-70%. Pipeline ~35-45%.",
+      "7. Adjust weights if some factors matter more (weight 2 doubles contribution)",
+      "8. Optionally create gap-moves.json with actions for yellow/red scores",
+      "9. Set as active in config/local.yaml: methodology.active: your-name"
+    ],
+    "remove_this_field": "Delete '_instructions' before production use."
+  }
+}

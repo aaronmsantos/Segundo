@@ -1,0 +1,8 @@
+{
+  "name": "enablement-packager",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "Package AI agents, tools, or sales playbooks for distribution to non-technical teammates. Creates complete bundles with guides, launchers, and verification steps.",
+  "requires": [],
+  "triggers": ["manual"]
+}

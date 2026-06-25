@@ -1,0 +1,42 @@
+# Segundo: Company Configuration
+# Edit this file to match your company and sales process.
+
+company:
+  name: "Your Company"
+  product: "Your product description"
+  website: ""
+  icp:
+    segments: [mid-market, enterprise]  # smb, mid-market, enterprise
+    verticals: [saas]
+    geo: [na]
+    min_acv: 10000
+    max_acv: 500000
+  pricing_model: seat  # seat, usage_based, flat, hybrid
+
+methodology:
+  framework: meddpicc  # meddpicc, meddic, bant, sandler, custom
+  deal_stages:
+    - { name: "Prospecting", probability: 5 }
+    - { name: "Discovery", probability: 15, gates: [pain, metrics] }
+    - { name: "Validating", probability: 35, gates: [champion, economic_buyer] }
+    - { name: "Negotiating", probability: 65, gates: [paper_process, decision_criteria] }
+    - { name: "Closing", probability: 90, gates: [decision_process] }
+  forecasting:
+    categories: [commit, best_case, pipeline, omit]
+    require_eb_for_commit: true
+
+connectors:
+  crm: { provider: salesforce, enabled: false }
+  calls: { provider: gong, enabled: false }
+  email: { provider: gmail, enabled: false }
+  chat: { provider: slack, enabled: false }
+
+team:
+  roles:
+    - { role: ae, owns: [deal_memory, methodology_score, follow_ups] }
+    - { role: sdr, owns: [outbound, qualification] }
+    - { role: se, owns: [scoping, technical_validation] }
+    - { role: manager, owns: [pipeline_review, forecast, coaching] }
+
+competitors: []
+  # - { name: "Competitor A", battle_card: "competitive/competitor-a.md" }

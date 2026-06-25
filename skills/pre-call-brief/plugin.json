@@ -1,0 +1,8 @@
+{
+  "name": "pre-call-brief",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "Generate a scannable 5-minute pre-call brief covering deal state, stakeholders, methodology gaps, competitive landmines, and suggested opening line.",
+  "requires": ["crm", "methodology", "competitive_intel"],
+  "triggers": ["manual"]
+}

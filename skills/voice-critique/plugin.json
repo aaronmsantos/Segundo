@@ -1,0 +1,1 @@
+{"name":"voice-critique","version":"1.0.0","type":"skill","description":"Email and DM quality check against voice.yaml profile","requires":[],"triggers":["manual"]}

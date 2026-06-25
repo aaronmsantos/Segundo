@@ -1,0 +1,1 @@
+{"name":"corpus-miner","version":"1.0.0","type":"skill","description":"Pattern extraction from call recordings - what wins, what loses, why","requires":[],"triggers":["manual"]}

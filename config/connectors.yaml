@@ -1,0 +1,33 @@
+# Segundo: Connector Configuration
+# API credentials are read from environment variables (never stored in this file).
+
+salesforce:
+  enabled: false
+  instance_url_env: SF_INSTANCE_URL
+  auth_method: token  # token or oauth2
+  username_env: SF_USERNAME
+  password_env: SF_PASSWORD
+  token_env: SF_TOKEN
+  field_mappings:
+    next_steps: Next_Steps__c
+    stage: StageName
+    close_date: CloseDate
+    amount: Amount
+
+hubspot:
+  enabled: false
+  api_key_env: HUBSPOT_API_KEY
+
+gong:
+  enabled: false
+  access_key_env: GONG_ACCESS_KEY
+  access_secret_env: GONG_ACCESS_SECRET
+
+gmail:
+  enabled: false
+  auth_method: oauth2
+
+slack:
+  enabled: false
+  bot_token_env: SLACK_BOT_TOKEN
+  deals_channel: "#sales-deals"

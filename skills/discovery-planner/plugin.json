@@ -1,0 +1,8 @@
+{
+  "name": "discovery-planner",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "Structure any prospect call with clear objectives, prioritized questions mapped to methodology gaps, and a diagnostic framework.",
+  "requires": ["crm", "methodology"],
+  "triggers": ["manual"]
+}

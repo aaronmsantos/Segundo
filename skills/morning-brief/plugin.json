@@ -1,0 +1,8 @@
+{
+  "name": "morning-brief",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "Daily priority briefing: yesterday's state, today's calendar, overnight updates, pipeline alerts, and open action items. Eliminates morning ramp-up time.",
+  "requires": ["crm", "calendar"],
+  "triggers": ["manual", "scheduled"]
+}

@@ -1,0 +1,1 @@
+{"name":"sales-email","version":"1.0.0","type":"skill","description":"Voice-calibrated email drafting using config/voice.yaml preferences","requires":[],"triggers":["manual"]}

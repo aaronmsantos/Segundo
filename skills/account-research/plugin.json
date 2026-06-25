@@ -1,0 +1,1 @@
+{"name":"account-research","version":"1.0.0","type":"skill","description":"Company research with ICP scoring against config/company.yaml","requires":[],"triggers":["manual"]}

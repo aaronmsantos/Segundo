@@ -1,0 +1,213 @@
+{
+  "id": "meddpicc-gap-moves",
+  "methodology": "meddpicc",
+  "version": "1.0.0",
+  "description": "Recommended next moves for each MEDDPICC factor when scored yellow or red",
+  "moves": {
+    "metrics": {
+      "yellow": {
+        "diagnosis": "Numbers exist but are seller-generated, not prospect-validated",
+        "moves": [
+          "Ask the champion to confirm or correct your estimates in the next call",
+          "Build a simple ROI model and walk through it live -- let them edit the inputs",
+          "Reference a comparable customer's published metrics as an anchor point"
+        ],
+        "anti_patterns": [
+          "Sending a PDF ROI calculator and hoping they fill it out",
+          "Quoting industry averages without connecting to their specific situation"
+        ]
+      },
+      "red": {
+        "diagnosis": "No quantified business impact exists",
+        "moves": [
+          "In the next call, ask: 'What does this problem cost you today in dollars, hours, or risk?'",
+          "Propose a discovery question that forces quantification: volume, frequency, cost per incident",
+          "If they can't quantify, ask what would happen if they did nothing for 12 months"
+        ],
+        "anti_patterns": [
+          "Skipping metrics because the champion says they 'just know' it's a problem",
+          "Accepting vague statements like 'it's costing us a lot' as quantification"
+        ]
+      }
+    },    "economic_buyer": {
+      "yellow": {
+        "diagnosis": "EB identified but has not engaged directly with your team",
+        "moves": [
+          "Ask the champion to schedule a 20-minute intro with the EB, framed around business outcomes not product",
+          "Create a one-page executive summary tailored to the EB's priorities",
+          "Offer to brief the EB on industry trends relevant to their role -- give before you ask"
+        ],
+        "anti_patterns": [
+          "Going around the champion to reach the EB directly",
+          "Asking for an EB meeting without giving the champion a reason the EB would say yes"
+        ]
+      },
+      "red": {
+        "diagnosis": "Economic Buyer is unknown or inaccessible",
+        "moves": [
+          "Ask the champion directly: 'Who signs off on a purchase of this size?'",
+          "Research the org chart via LinkedIn, annual reports, or press releases",
+          "If the champion deflects, test: 'If you and I agreed this was the right solution today, what would happen next?'"
+        ],
+        "anti_patterns": [
+          "Assuming the champion is the EB without confirming",
+          "Proceeding to proposal without knowing who approves budget"
+        ]
+      }
+    },
+    "decision_criteria": {
+      "yellow": {
+        "diagnosis": "Criteria inferred from context but never explicitly confirmed",
+        "moves": [
+          "In the next call, ask: 'What are the three things this solution must do to get a yes from your team?'",
+          "Share your understanding of their criteria and ask them to correct or add to it",
+          "Ask how they evaluated the last vendor they bought -- what mattered most?"
+        ],
+        "anti_patterns": [
+          "Assuming technical fit equals decision criteria",
+          "Letting a demo substitute for criteria discovery"
+        ]
+      },      "red": {
+        "diagnosis": "Decision criteria completely unknown",
+        "moves": [
+          "Dedicate the next meeting to understanding evaluation criteria before demoing anything",
+          "Ask: 'If you had to write the internal business case, what would need to be true?'",
+          "Propose a structured evaluation framework and let them react to it"
+        ],
+        "anti_patterns": [
+          "Running a demo without knowing what they're evaluating",
+          "Pitching features and hoping something sticks"
+        ]
+      }
+    },
+    "decision_process": {
+      "yellow": {
+        "diagnosis": "General shape of the process is known but steps are not mapped",
+        "moves": [
+          "Map the process together: 'Let's walk through what happens between your team saying yes and a signed contract'",
+          "Ask who else needs to weigh in and at what stage",
+          "Propose a mutual action plan with dates and share it for feedback"
+        ],
+        "anti_patterns": [
+          "Assuming their process mirrors your sales process",
+          "Skipping the process map because the champion says 'it should be straightforward'"
+        ]
+      },
+      "red": {
+        "diagnosis": "Decision process is completely unknown",
+        "moves": [
+          "Ask: 'Walk me through how your company bought the last piece of software in this price range'",
+          "Ask the champion who else has been involved in similar decisions",
+          "If early stage, flag this as a required output of the next meeting"
+        ],
+        "anti_patterns": [
+          "Moving to proposal without understanding the approval chain",
+          "Treating urgency as a substitute for process clarity"
+        ]
+      }
+    },    "paper_process": {
+      "yellow": {
+        "diagnosis": "General awareness that procurement exists but steps and timeline are unmapped",
+        "moves": [
+          "Ask: 'Once we have internal alignment, what does procurement look like? Legal review? Security?'",
+          "Ask the champion for the name of the procurement contact and typical cycle time",
+          "Offer to send a pre-filled security questionnaire or compliance docs proactively"
+        ],
+        "anti_patterns": [
+          "Waiting until after verbal agreement to discover a 90-day procurement cycle",
+          "Assuming the champion can bypass procurement"
+        ]
+      },
+      "red": {
+        "diagnosis": "Paper process has not been discussed at all",
+        "moves": [
+          "Raise it now: 'I want to make sure we're not surprised by timeline. Can you walk me through what happens after your team says go?'",
+          "Ask if there's a security review, legal review, or procurement board involved",
+          "Ask for any vendor onboarding forms or requirements early"
+        ],
+        "anti_patterns": [
+          "Discovering legal requirements the week you expect to close",
+          "Never asking about procurement because it feels premature"
+        ]
+      }
+    },
+    "pain": {
+      "yellow": {
+        "diagnosis": "Pain identified by seller and acknowledged by prospect, but not articulated in their own words",
+        "moves": [
+          "Ask the champion to describe the problem as if explaining it to their CEO",
+          "Ask: 'What happens to your team if this problem isn't solved in the next 6 months?'",
+          "Connect the pain to a personal consequence -- career risk, team burden, missed targets"
+        ],
+        "anti_patterns": [
+          "Telling them their pain instead of having them tell you",
+          "Accepting 'yeah, that's a problem' as deep pain confirmation"
+        ]
+      },      "red": {
+        "diagnosis": "Pain is assumed, not confirmed by the prospect",
+        "moves": [
+          "Go back to discovery: 'Help me understand -- what triggered you to look at this now?'",
+          "Ask: 'What have you tried before to solve this? What happened?'",
+          "If they can't articulate pain, this may not be a real opportunity -- qualify harder"
+        ],
+        "anti_patterns": [
+          "Projecting pain from similar companies onto this prospect",
+          "Moving past discovery because a meeting was booked"
+        ]
+      }
+    },
+    "champion": {
+      "yellow": {
+        "diagnosis": "Champion has 2-3 of the 4 criteria: motive, influence, EB access, active internal selling",
+        "moves": [
+          "Identify which criterion is missing and address it directly",
+          "If missing internal selling: arm the champion with a one-page business case they can share",
+          "If missing EB access: ask who else in the org could make an introduction",
+          "If missing influence: consider whether there's a stronger champion candidate"
+        ],
+        "anti_patterns": [
+          "Treating a friendly contact as a champion without testing their willingness to sell internally",
+          "Assuming motive equals influence"
+        ]
+      },
+      "red": {
+        "diagnosis": "No champion exists or current contact meets 0-1 criteria",
+        "moves": [
+          "Test the current contact: 'Would you be willing to introduce me to [decision maker]?'",
+          "If they decline or deflect, search for a different champion with more at stake",
+          "Ask: 'Who in your organization cares most about solving this problem?'",
+          "Consider multi-threading to find someone with real motive and influence"
+        ],
+        "anti_patterns": [
+          "Calling someone a champion because they respond to emails",
+          "Building the entire deal on a single contact who has no power"
+        ]
+      }
+    },    "competition": {
+      "yellow": {
+        "diagnosis": "Competitors identified but position relative to them is unclear",
+        "moves": [
+          "Ask: 'How do you see us compared to [competitor]? What do they do better? What do we do better?'",
+          "Share a differentiation point and ask the champion to validate it",
+          "Ask if the competitor has done a demo or submitted a proposal"
+        ],
+        "anti_patterns": [
+          "Trash-talking competitors instead of differentiating on value",
+          "Ignoring competition because the champion seems positive about you"
+        ]
+      },
+      "red": {
+        "diagnosis": "Competitive landscape is completely unknown",
+        "moves": [
+          "Ask directly: 'Are you evaluating other solutions? Who else is in the conversation?'",
+          "Ask: 'What would you do if you decided not to go with us?' -- surfaces alternatives including do-nothing",
+          "Research the prospect's tech stack and recent vendor announcements for clues"
+        ],
+        "anti_patterns": [
+          "Assuming you're the only option because they haven't mentioned anyone else",
+          "Never asking about competition because it feels awkward"
+        ]
+      }
+    }
+  }
+}

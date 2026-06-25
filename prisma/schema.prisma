@@ -1,0 +1,126 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Deal {
+  id              String      @id @default(uuid())
+  name            String      @unique
+  acv             Float       @default(0.0)
+  stage           String      @default("Prospecting")
+  owner           String?
+  status          String      @default("ACTIVE") // ACTIVE, WON, LOST
+  warmthScore     Int         @default(0)
+  closeDateTarget String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  stakeholders    Stakeholder[]
+  methodologyScores  MethodologyScore[]
+  callHistory     CallHistory[]
+  painPoints      PainPoint[]
+  competitors     CompetitorMention[]
+  nextSteps       NextStep[]
+  emailLogs       EmailLog[]
+  dealLogs        DealLog[]
+}
+
+model Stakeholder {
+  id            String   @id @default(uuid())
+  dealId        String
+  name          String
+  title         String?
+  role          String?  // Champion, Economic Buyer, Technical Evaluator
+  lastContact   DateTime?
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model MethodologyScore {
+  id            String   @id @default(uuid())
+  dealId        String
+  factor        String   // Metrics, Economic Buyer, Decision Criteria, etc.
+  score         String   // RED, YELLOW, GREEN
+  rationale     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model DealLog {
+  id             String   @id @default(uuid())
+  dealId         String
+  actionType     String
+  contextSummary String
+  timestamp      DateTime @default(now())
+  deal           Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model CallHistory {
+  id            String   @id @default(uuid())
+  dealId        String
+  date          DateTime @default(now())
+  type          String   // Discovery, Demo, Negotiation
+  attendees     String?  // JSON string or comma separated
+  keyOutcomes   String?
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model PainPoint {
+  id            String   @id @default(uuid())
+  dealId        String
+  description   String
+  sourceQuote   String?
+  validated     Boolean  @default(false)
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model CompetitorMention {
+  id              String   @id @default(uuid())
+  dealId          String
+  competitorName  String
+  context         String?
+  deal            Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model NextStep {
+  id            String   @id @default(uuid())
+  dealId        String
+  action        String
+  owner         String?
+  dueDate       DateTime?
+  status        String   @default("OPEN") // OPEN, COMPLETED
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model EmailLog {
+  id            String   @id @default(uuid())
+  dealId        String
+  date          DateTime @default(now())
+  direction     String   // INBOUND, OUTBOUND
+  recipient     String?
+  frameworkUsed  String?
+  subject       String?
+  deal          Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+}
+
+model Signal {
+  id                String   @id @default(uuid())
+  platform          String   // reddit, twitter, linkedin
+  sourceUrl         String   @unique
+  author            String
+  subreddit         String?
+  title             String?
+  category          String
+  label             String
+  score             Int
+  contentSnippet    String
+  recommendedAction String?
+  status            String   @default("NEW") // NEW, ALERTED, DISMISSED, ACTIONED
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}

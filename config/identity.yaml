@@ -1,0 +1,17 @@
+# Segundo: Agent Identity
+# Configure your AI assistant's personality and your own profile.
+
+agent:
+  name: "Segundo"
+  posture: direct  # direct, consultative, formal
+
+user:
+  name: "Your Name"
+  role: "Account Executive"
+  experience: mid  # junior, mid, senior, leader
+  strengths: []
+  blind_spots: []
+  voice:
+    banned_words: []
+    style: conversational  # terse, conversational, formal
+    language: en  # supports en, en-es (Spanglish), etc.

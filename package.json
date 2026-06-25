@@ -1,0 +1,45 @@
+{
+  "name": "segundo-os",
+  "version": "0.1.0",
+  "description": "Open-source sales AI operating system. Learns your methodology, remembers your deals, gets smarter every quarter.",
+  "type": "module",
+  "bin": {
+    "segundo": "./scripts/cli.ts"
+  },
+  "scripts": {
+    "dev": "tsx scripts/cli.ts",
+    "init": "tsx scripts/cli.ts init",
+    "build": "tsc",
+    "brief": "tsx scripts/cli.ts brief",
+    "inspect": "tsx scripts/cli.ts inspect",
+    "review": "tsx scripts/cli.ts review"
+  },
+  "keywords": [
+    "sales",
+    "ai",
+    "crm",
+    "meddpicc",
+    "deal-intelligence",
+    "sales-copilot",
+    "gong",
+    "salesforce"
+  ],
+  "author": "Aaron Santos",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@prisma/client": "^6.2.1",
+    "googleapis": "^173.0.0",
+    "jsforce": "^3.6.2",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

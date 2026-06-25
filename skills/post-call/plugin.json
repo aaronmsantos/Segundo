@@ -1,0 +1,8 @@
+{
+  "name": "post-call",
+  "version": "1.0.0",
+  "type": "skill",
+  "description": "4-stage post-call processing chain: transcribe, extract intel, update deal state, draft follow-up. Supports audio files, transcripts, or manual notes.",
+  "requires": ["crm", "methodology", "transcription"],
+  "triggers": ["manual"]
+}

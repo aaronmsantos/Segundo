@@ -1,0 +1,16 @@
+# Segundo: Voice Configuration
+# Controls how the AI writes emails, DMs, and internal messages.
+
+email:
+  style: conversational
+  max_paragraphs: 4
+  sign_off: "Best,"
+  banned_words: [leverage, unlock, deep dive, circle back, synergy, bandwidth, touch base, paradigm]
+
+dm:
+  register: casual  # casual ("Maybe there's"), formal ("Perhaps there's")
+  sign_off: "All the best,"
+
+internal:
+  style: terse
+  skip_preamble: true
